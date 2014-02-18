@@ -1,4 +1,4 @@
-from django.conf.urls.defaults import *
+from django.conf.urls import patterns
 from views import staff_member_template
 from django.views.generic.simple import direct_to_template
 

@@ -7,12 +7,12 @@ except ImportError:
 
 setup(
     name='django-tastypie-apibrowser',
-    version='0.0.1',
+    version='0.1.0',
     description='JS Tastypie API Browser for Django.',
-    author='Kevin Mooney',
+    author='Kevin Mooney & Allan James Vestal',
     license='BSD', 
-    author_email='kevin@webcubecms.com',
-    url='http://github.com/cuker/django-fbapps/',
+    author_email='ajvestal@journalsentinel.com',
+    url='http://github.com/datahub/django-tastypie-apibrowser/',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Environment :: Web Environment',

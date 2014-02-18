@@ -5,7 +5,7 @@ This is a javascript-based API browser for tastypie - the JS requirements
 are vendored in.  Out-of-the-box, this project adds the apibrowser to 
 the admin, extending the ``admin/index.html`` template.
 
-This has been tested on Django 1.3+, but should work anywhere that 
+This has been tested on Django 1.6.1, but should work anywhere that 
 tastypie is installed.  
 
 Installation
@@ -13,8 +13,7 @@ Installation
 
 Install by fetching the repository from github and installing::
 
-    % git git@github.com:cuker/django-tastypie-apibrowser
-    % python setup.py install
+    % pip install -e git://github.com:datahub/django-tastypie-apibrowser#egg=tastypie-apibrowser
 
 Then, open your settings.py and add the application to ``INSTALLED_APPS``::
     
