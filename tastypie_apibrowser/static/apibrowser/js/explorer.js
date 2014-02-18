@@ -58,9 +58,12 @@ APIExplorer = null;
         get_application_list: function(callback) {
             var t= this;
             django.jQuery.get(this.options['base_endpoint'], function(response) {
-                _.each(response.objects, function(v,k,l) {
-                    t.Applications[v.application] = v.uri;
+console.log(response);
+c = response;
+                _.each(response, function(urls, app) {
+                    t.Applications[app] = urls.schema;
                 });
+
                 if (callback !== null &&
                     typeof callback == 'function') {
                     callback();
@@ -70,6 +73,7 @@ APIExplorer = null;
 
         get_application_api: function(app_url, callback) {
             var t = this;
+console.log(app_url);
             django.jQuery.get(app_url, function (response) {
                 if (typeof callback == 'function') {
                     callback(response);
