@@ -1,13 +1,17 @@
+# Imports from django
 from django.conf.urls import patterns
-from views import staff_member_template
-from django.views.generic.simple import direct_to_template
+from django.views.generic import TemplateView
 
-urlpatterns = patterns('', 
-    (r'^$',           staff_member_template, 
-                      {'template':'apibrowser/index.html'}, 
-                      'api-browser'),
-    (r'^templates$', direct_to_template, 
-                      {'template':'apibrowser/templates.html'},
-                      'api-browser-templates'),
+
+# Imports from this app
+from views import staff_member_template
+
+
+urlpatterns = patterns('',
+    (r'^$', staff_member_template, {'template_name':'apibrowser/index.html'},
+        'name=api-browser'),
+    (r'^templates$', TemplateView.as_view(
+            template_name='apibrowser/templates.html'),
+        'name=api-browser-templates'),
     )
 

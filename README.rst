@@ -13,7 +13,7 @@ Installation
 
 Install by fetching the repository from github and installing::
 
-    % pip install -e git://github.com:datahub/django-tastypie-apibrowser#egg=tastypie-apibrowser
+    % pip install -e git://github.com/datahub/django-tastypie-apibrowser#egg=tastypie-apibrowser
 
 Then, open your settings.py and add the application to ``INSTALLED_APPS``::
     
