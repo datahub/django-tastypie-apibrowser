@@ -1,15 +1,14 @@
 # Imports from django
 from django.conf.urls import url, patterns
-# from django.views.generic import TemplateView
+from django.contrib.admin.views.decorators import staff_member_required
+from django.views.generic import TemplateView
 
 
 # Imports from this app
-from views import StaffMemberView
+# from views import StaffMemberView
 
 
 urlpatterns = patterns('',
-        # (r'^$', staff_member_template, {'template_name':'apibrowser/index.html'},
-        #     'name=api-browser'),
-        url(r'^$', StaffMemberView.as_view()),
-        # url(r'^templates$', TemplateView.as_view(template_name='apibrowser/templates.html')),
+        url(r'^$', staff_member_required(TemplateView.as_view(template_name='apibrowser/index.html'))),
+        url(r'^templates$', TemplateView.as_view(template_name='apibrowser/templates.html')),
     )
