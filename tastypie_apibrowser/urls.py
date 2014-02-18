@@ -10,8 +10,8 @@ from django.views.generic import TemplateView
 urlpatterns = patterns('',
     # (r'^$', staff_member_template, {'template_name':'apibrowser/index.html'},
         # 'name=api-browser'),
-    (r'^templates$', TemplateView.as_view(
+        (r'^templates$', TemplateView.as_view(
             template_name='apibrowser/templates.html'),
-        'name=api-browser-templates'),
+            'name=api-browser-templates'),
     )
 
